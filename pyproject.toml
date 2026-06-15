@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claude-fusion"
+version = "0.1.0"
+description = "A panel of Claude models (parallel / relay / debate) with an optional judge and a final synthesizer."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["textual", "httpx"]
+
+[project.scripts]
+claude-fusion = "app:main"
+
+[tool.setuptools]
+py-modules = ["app", "fusion", "config"]
